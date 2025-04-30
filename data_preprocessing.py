@@ -12,11 +12,11 @@ DATASET_PATH = "dataset/"
 NUM_CLASSES = 43
 
 def load_data():
-    train_df = pd.read_csv(os.path.join(DATASET_PATH, "dataset/Train.csv"))
+    train_df = pd.read_csv(os.path.join(DATASET_PATH, "Train.csv"))
 
     data, labels = [], []
     for _, row in train_df.iterrows():
-        img_path = os.path.join(DATASET_PATH, "Train", row["Path"])
+        img_path = os.path.join(DATASET_PATH, row["Path"])
         img = cv2.imread(img_path)
         img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
 
