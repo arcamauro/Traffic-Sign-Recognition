@@ -24,7 +24,6 @@ class TrafficSignRecognitionDataset:
         img_name = self.dataframe.iloc[idx]['Path']
         label = int(self.dataframe.iloc[idx]['ClassId'])
 
-        # Costruisci path assoluto
         img_path = os.path.join(self.root_dir, img_name)
         image = Image.open(img_path)
 
