@@ -1,9 +1,0 @@
-tensorflow==2.15.0
-tensorflow-datasets
-numpy
-pandas
-matplotlib
-opencv-python
-scikit-learn
-scipy
-tqdm
