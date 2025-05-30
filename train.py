@@ -22,5 +22,5 @@ dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = TrafficSignRecognitionCNN.to(device)
-criterion = nn.CrossEntropyLoss()
-loss_fn = torch.optim.Adam(model.parameters(), lr=0.001)
+loss_fn = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
