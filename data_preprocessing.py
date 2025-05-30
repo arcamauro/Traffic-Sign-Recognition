@@ -14,8 +14,9 @@ df = load_data("dataset/Train.csv")
 
 class TrafficSignRecognitionDataset:
     def __init__(self, dataframe, root_dir, transform=None):
-        self.data = dataframe
+        self.dataframe = dataframe
         self.root_dir = root_dir
+        self.transform = transform
     
     def __len__(self):
         return len(self.dataframe)
